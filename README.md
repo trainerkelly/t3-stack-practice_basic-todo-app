@@ -9,16 +9,16 @@ I decided that I was going to try and do a slightly more complex to-do app than 
 - [x] create 4 different components for each part of the application
 - [x] set up database
 - [ ] create routes (tRPC)
-      -- [ ] create getTasks
-      --- [ ] test route
-      -- [ ] create addTasks
-      --- includes timestamp
-      --- [ ] make the "add task" functionality work
-      --- [ ] test route
-      -- [ ] create setComplete
-      --- includes timestamp when updated
-      --- [ ] make the checkboxes work
-      --- [ ] test route
+  - [ ] create getTasks
+    - [ ] test route
+    - [ ] create addTasks
+    - includes timestamp
+  - [ ] make the "add task" functionality work
+    - [ ] test route
+    - [ ] create setComplete
+  - includes timestamp when updated
+    - [ ] make the checkboxes work
+    - [ ] test route
 - [ ] style app
 
 ## Step 1: Set Up

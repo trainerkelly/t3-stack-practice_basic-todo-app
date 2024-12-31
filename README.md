@@ -48,8 +48,11 @@ I initially had trouble setting up the database – I only realized after that t
 
 So the database URL looks like:
 
-```DATABASE_URL="postgresql://POSTGRESUSERNAME:POSTGRESSPASSWORD@localhost:5432/practice-sites"
-
-```
+`DATABASE_URL="postgresql://POSTGRESUSERNAME:POSTGRESSPASSWORD@localhost:5432/practice-sites"`
 
 (obviously that postgresusername and postgresspassword isn't my actual postgres username nor password lol swap them out with yours)
+
+## Other Notes
+
+- had to update the README a few times because I don't really know how to use markdown, lol
+- yes, I'm effectively writing a blog post with this...I hope the insights can help people.

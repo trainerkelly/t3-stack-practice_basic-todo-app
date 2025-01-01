@@ -28,11 +28,38 @@ I decided that I was going to try and do a slightly more complex to-do app than 
 Created four components:
 
 - AddToDo (adds tasks)
-- CurrentToDo (current tasks)
-- CompletedToDo (completed tasks)
+- CurrentToDo (current tasks) ~~=> toDos (tasks display – used for two sections: Current Tasks and Completed Tasks. Imports different data based on the props.)~~
+- ~~CompletedToDo (completed tasks)~~ (decided to drop because I realized that I could just use the CurrentToDo layout and just swap out what info it displays with a function (maybe through a prop???))
 - ToDoApp (brings everything together)
 
 Each section as a div that contains a header.
+
+#### SIDE NOTE: Changing CurrentToDo and CompletedToDo
+
+I realized earlier in the day that I could just use the same layout for the CurrentToDo and CompletedToDo and just swap what gets called, most likely through props or something. Like, use the route function to display the data I'm looking for in each section (CurrentToDo or CompletedToDo). I copied the code from CompletedToDo into CurrentToDo and...WAIT A MINUTE!!! Hang on, hang on....!!!!!
+
+Let me restore the CompletedToDo component and then create ANOTHER component that gets put into them. OOO!! OOO!!!!
+
+So there will be:
+
+- CurrentToDo
+- CompletedToDo
+- ToDos
+
+ToDos is the base component. CurrentToDo and CompletedToDo are the adapted component (I don't know what to call it lol) that are then applied to the home component. Okay...okay...let me do this!!
+
+Okay, so I set up the CurrentToDo and I passed the title as a prop (since that's all I have right now)...and it's giving me an error. Clearly, I did not do that right. Let me go ook up what I'm supposed to do in this case. A brief look at the React docs (https://react.dev/learn/passing-props-to-a-component) shows me I typed it incorrectly. I definitely had the right idea, but not the right execution...so let me go fix that. (It looks like I was supposed to put everything in {} and I didn't – so the prop as a parameter is in {} and the components on the other pages are meant to be in {} too.)
+
+And...IT WORKED!! (Now I have another problem: making it typesafe. Oops.)
+
+Brief experiment: do I need the curly braces when I fill in the info or nah? Let me see...surprising to me, it's a "nah"! o_o I was certainly it was going to be required, but I guess not?! O_O Maybe it's because it's a string...? (When I say "fill in the info", I'm talking about props. When I fill in the props on the component, it doesn't look like I need it for the string. Let me double check by restarting npm run dev aaaaand...still works perfectly. Okay that's cool. Now to typesafe it.)
+
+I'm pretty proud of myself for initially figuring out how to make it typesafe (I wrote title: string and it worked perfectly...before the curly braces), but after correcting my error (no curly braces).
+
+Making the props typesafe:
+
+- https://www.pluralsight.com/resources/blog/guides/defining-props-in-react-function-component-with-typescript (use interface seems to be the answer)
+- https://akoskm.com/how-to-type-react-props-with-typescript/ (this seems to be a good answer too that looks simple...let's see if I can just put :string after the curly braces to make it work for right now and I'll set up an interface once I have more props to add.) (Okay, just adding "string" did not work. Let me make the interface then and add it.) (Interface worked perfectly. That was pretty simple!)
 
 ### Update page.tsx contain the Home component
 

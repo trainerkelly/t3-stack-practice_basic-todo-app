@@ -79,6 +79,16 @@ So the database URL looks like:
 
 (obviously that postgresusername and postgresspassword isn't my actual postgres username nor password lol swap them out with yours)
 
+I did run the commands for generating and migrating the database. (npm run db:generate, npm run db:migrate) That's how I realized I had a problem initially with setting up the database, but I got it now.
+
+### Creating the Routes
+
+First thing I did was try to see the similarities and differences between the setups for this T3 Stack scaffolding and the one I did from scratch following the tutorial I previously mentioned. I ended up finding that there is a sample post router inside of the API folder inside of a folder called ROUTERS. These contain various routers. It was only later when I was trying to put the functions together for the app following what I've previously written that I realized that I didn't know what this t3-stack-app used for the const "trpc" that was in the original tutorial. It looks like it uses "api" as the const inside of the react.tsx.
+
+...or not. It's giving me a type error.
+
+...aaaaaaand I am stumped. I don't know what I'm doing...^^; It may be easier to just set this up from scratch...
+
 ## Other Notes
 
 - had to update the README a few times because I don't really know how to use markdown, lol
